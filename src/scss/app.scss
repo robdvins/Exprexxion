@@ -1,0 +1,144 @@
+// Variables
+$red: #ff424e;
+$white: #f7f7f7;
+$black: #30343f;
+$black2: #242730;
+$violet: #861aad;
+$family: 'Roboto Mono', monospace;
+$transition: cubic-bezier(.05,.26,1,1.21);
+
+* {
+    box-sizing: border-box;
+
+    &:before {
+        box-sizing: border-box;
+    }
+
+    &:after {
+        box-sizing: border-box;
+    }
+}
+
+body {
+    margin: 0;
+    color: $white;
+    background-color: $black;
+    font-family: $family;
+}
+
+.wrapper {
+    width: 100%;
+    padding: 0 20px;
+    height: 100vh;
+}
+
+.title {
+    margin: 0;
+    padding: 10px 0;
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.app {
+    overflow-y: auto;
+    padding: 10px 0;
+    max-height: 62%;
+}
+
+.input-txt {
+    margin: auto;
+    border: none;
+    width: 440px;
+    outline: none;
+    display: block;
+    font-size: 16px;
+    padding: 10px 15px;
+    border-radius: 3px;
+    font-family: $family;
+    transition: all $transition .3s;
+
+    &:focus {
+        box-shadow: 0px 0px 1px 4px rgba($violet, .75);
+    }
+
+    &::placeholder {
+        font-size: 12.5px;
+        font-weight: 500;
+        color: rgba($black, .4)
+    }
+}
+
+ul {
+    margin: 0;
+    padding: 20px 0;
+    list-style: none;
+    overflow-y: hidden;
+
+    li {
+        display: flex;
+        padding: 7px 15px;
+        margin-bottom: 5px;
+        border-radius: 3px;
+        align-items: center;
+        background-color: #363a47;
+        justify-content: space-between;
+    }
+}
+
+.btn {
+    color: $white;
+    outline: none;
+    cursor: pointer;
+    padding: 5px 20px;
+    font-family: $family;
+    transition: all $transition .4s;
+
+    & span {
+        top: 1.5px;
+        position: relative;
+    }
+    
+    &.btn-remove {
+        color: $red;
+        font-weight: 500;
+        border-radius: 3px;
+        border: 2px solid $red;
+        background-color: $black2;
+
+        &:hover {
+            color: $black2;
+            background-color: $red;
+        }
+    }
+
+    &.btn-copy {
+        border: none;
+        width: 100%;
+        font-weight: 700;
+        padding: 15px 20px;
+        background-color: $violet;
+
+        &:hover {
+            background-color: #912eb4;
+        }
+    }
+}
+
+.footer {
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 100;
+    position: fixed;
+    background-color: $black2;
+}
+
+.regex {
+    margin: 0;
+    padding: 20px 0;
+    font-weight: 500;
+    overflow-y: auto;
+    text-align: center;
+}

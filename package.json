@@ -1,0 +1,32 @@
+{
+  "name": "exprexxion",
+  "version": "0.1.0",
+  "description": "Generador de expresiones regulares",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hanzuk/Exprexxion.git"
+  },
+  "keywords": [
+    "regex"
+  ],
+  "author": "Roberto Duarte",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Hanzuk/Exprexxion/issues"
+  },
+  "homepage": "https://github.com/Hanzuk/Exprexxion#readme",
+  "devDependencies": {
+    "electron": "^1.8.3"
+  },
+  "dependencies": {
+    "animate.css": "^3.6.1",
+    "clipboard": "^2.0.0",
+    "regexgen": "^1.3.0",
+    "vue": "^2.5.14"
+  }
+}
