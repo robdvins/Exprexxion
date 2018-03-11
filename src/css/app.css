@@ -1,12 +1,6 @@
-* {
+*, *::before, *::after {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
-  *:before {
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box; }
-  *:after {
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box; }
 
 body {
   margin: 0;
@@ -16,7 +10,7 @@ body {
 
 .wrapper {
   width: 100%;
-  padding: 0 20px;
+  padding: 0 10px;
   height: 100vh; }
 
 .title {
@@ -28,8 +22,14 @@ body {
 
 .app {
   overflow-y: auto;
-  padding: 10px 0;
-  max-height: 62%; }
+  padding: 10px 10px;
+  max-height: 65%; }
+  .app::-webkit-scrollbar {
+    width: 7px;
+    background-color: #30343f; }
+  .app::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #363a47; }
 
 .input-txt {
   margin: auto;
@@ -101,9 +101,9 @@ ul {
     font-weight: 500;
     border-radius: 3px;
     border: 2px solid #ff424e;
-    background-color: #242730; }
+    background-color: #363a47; }
     .btn.btn-remove:hover {
-      color: #242730;
+      color: #363a47;
       background-color: #ff424e; }
   .btn.btn-copy {
     border: none;
@@ -128,4 +128,5 @@ ul {
   padding: 20px 0;
   font-weight: 500;
   overflow-y: auto;
+  min-height: 60.8px;
   text-align: center; }

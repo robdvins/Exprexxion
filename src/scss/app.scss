@@ -1,22 +1,15 @@
-// Variables
+// Variables 
 $red: #ff424e;
 $white: #f7f7f7;
 $black: #30343f;
-$black2: #242730;
+$black2: #363a47;
+$black3: #242730;
 $violet: #861aad;
 $family: 'Roboto Mono', monospace;
 $transition: cubic-bezier(.05,.26,1,1.21);
 
-* {
+*,*::before,*::after {
     box-sizing: border-box;
-
-    &:before {
-        box-sizing: border-box;
-    }
-
-    &:after {
-        box-sizing: border-box;
-    }
 }
 
 body {
@@ -28,7 +21,7 @@ body {
 
 .wrapper {
     width: 100%;
-    padding: 0 20px;
+    padding: 0 10px;
     height: 100vh;
 }
 
@@ -42,8 +35,18 @@ body {
 
 .app {
     overflow-y: auto;
-    padding: 10px 0;
-    max-height: 62%;
+    padding: 10px 10px;
+    max-height: 65%;
+
+    &::-webkit-scrollbar {
+        width: 7px;
+        background-color: $black;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        background-color: $black2;
+    }
 }
 
 .input-txt {
@@ -132,7 +135,7 @@ ul {
     width: 100%;
     z-index: 100;
     position: fixed;
-    background-color: $black2;
+    background-color: $black3;
 }
 
 .regex {
@@ -140,5 +143,6 @@ ul {
     padding: 20px 0;
     font-weight: 500;
     overflow-y: auto;
+    min-height: 60.8px;
     text-align: center;
 }
