@@ -145,4 +145,8 @@ ul {
     overflow-y: auto;
     min-height: 60.8px;
     text-align: center;
+
+    &::selection {
+        background-color: rgba($black3, 0);
+    }
 }

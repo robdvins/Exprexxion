@@ -1,6 +1,7 @@
 const Vue = require('vue/dist/vue.min.js')
 const regexgen = require('regexgen')
 const Clipboard = require('clipboard')
+const swal = require('sweetalert2')
 
 new Vue({
     el: '#app',
@@ -30,6 +31,18 @@ new Vue({
             } else {
                 this.regex = regexgen(this.items).toString()
             }
+        },
+        copied() {
+            swal({
+                timer: 1500,
+                width: '70%',
+                padding: null,
+                animation: false,
+                position: 'bottom',
+                showConfirmButton: false,
+                customClass: 'animated bounceIn',
+                text: '¡Copiado al portapapeles!'
+            })
         }
     }
 })

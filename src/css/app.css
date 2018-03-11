@@ -130,3 +130,7 @@ ul {
   overflow-y: auto;
   min-height: 60.8px;
   text-align: center; }
+  .regex::-moz-selection {
+    background-color: rgba(36, 39, 48, 0); }
+  .regex::selection {
+    background-color: rgba(36, 39, 48, 0); }
